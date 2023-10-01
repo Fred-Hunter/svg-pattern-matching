@@ -1,18 +1,14 @@
 const targetSvg = document.getElementById("targetSvg");
 const sourceSvg = document.getElementById("sourceSvg");
 
-targetSvg.style = "position: absolute; left: 0; top: 0";
-sourceSvg.style = "position: absolute; left: 0; top: 0";
-
-targetSvg.position
-const targetSvgPaths = [...targetSvg.childNodes[2].childNodes[0].childNodes].filter(n => n.tagName === "path");
 const sourceSvgPath = document.getElementById(`path${targetSvgPaths.length + 1}`);
+const targetSvgPaths = [...targetSvg.childNodes[2].childNodes[0].childNodes].filter(n => n.tagName === "path");
 
 function measurePath() {
     let circles = "";
             
-    const pathLength = sourceSvgPath.getTotalLength();
-    for(let distance = 0; distance <= pathLength; distance += 5) {
+    const sourcePathLength = sourceSvgPath.getTotalLength();
+    for(let distance = 0; distance <= sourcePathLength; distance += 5) {
         const sourceSvgPoint = sourceSvgPath.getPointAtLength(distance);
         
         let isOverlapping = false; 
