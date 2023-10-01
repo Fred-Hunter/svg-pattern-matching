@@ -1,8 +1,8 @@
 const targetSvg = document.getElementById("targetSvg");
 const sourceSvg = document.getElementById("sourceSvg");
 
-const sourceSvgPath = document.getElementById(`path${targetSvgPaths.length + 1}`);
 const targetSvgPaths = [...targetSvg.childNodes[2].childNodes[0].childNodes].filter(n => n.tagName === "path");
+const sourceSvgPath = document.getElementById(`path${targetSvgPaths.length + 1}`);
 
 function measurePath() {
     let circles = "";
